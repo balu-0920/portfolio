@@ -104,15 +104,6 @@ or
 - Interactive user experience
 - Optimized for desktop and mobile devices
 
-## Future Improvements
-
-- React version
-- Backend integration
-- Blog section
-- Project filtering
-- Visitor analytics dashboard
-- Advanced animations
-- Multi-language support
 
 ## License
 
