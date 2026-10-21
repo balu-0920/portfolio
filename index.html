@@ -9,10 +9,11 @@
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!-- EmailJS SDK Initialization (Updated to v4 with your Public Key) -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script type="text/javascript">
     (function(){
-        emailjs.init("YOUR_PUBLIC_KEY");
+        emailjs.init("a7PA4PTwAfktazLXG");
     })();
   </script>
 </head>
@@ -160,14 +161,15 @@
           <img src="./assets/crowd.png" alt="Crowd Management System Dashboard" loading="lazy" onerror="this.src='./assets/placeholder.jpg'" class="project-img">
           <div class="project-content">
             <div class="project-header">
-              <h3>Crowd Management System</h3>
+              <h3>Real-Time Crowd Management System</h3>
               <span class="status-badge completed">Completed</span>
             </div>
-            <p>Built a real-time crowd monitoring pipeline using YOLOv8 and OpenCV, incorporating frame skipping for computational efficiency, centroid-based tracking, and dynamic grid-based crowd-density estimation. Developed an ML pipeline predicting next-day crowd levels as a Flask microservice, backed by REST APIs for analytics and SMS alerts.</p>
+            <p>Built a real-time crowd monitoring pipeline using YOLOv8 and OpenCV, incorporating frame skipping for computational efficiency, centroid-based tracking, and dynamic grid-based crowd-density estimation.</p>
             <div class="tags"><span>Python</span><span>OpenCV</span><span>Node.js</span><span>Express.js</span><span>Scikit-learn</span><span>MongoDB</span><span>React</span></div>
             <div class="project-links">
               <button class="btn btn-small" onclick="openModal('modal-crowd')">View Case Study</button>
-              <a href="https://github.com/balu-0920/real-time-crowd-analytics-system" target="_blank" class="btn btn-icon"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/balu-0920/real-time-crowd-analytics-system" target="_blank" class="btn btn-icon" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              <a href="https://crowd-dashboard.onrender.com/" target="_blank" class="btn btn-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
         </article>
@@ -179,10 +181,29 @@
               <h3>TradeX – Online Trading Simulator</h3>
               <span class="status-badge completed">Completed</span>
             </div>
-            <p>Developed a full-stack stock exchange simulator with user authentication, portfolio management, and REST API-based order placement. Implemented a robust C++ price-time priority matching engine with partial order execution and STL-based order book management.</p>
+            <p>Developed a full-stack stock exchange simulator with user authentication, portfolio management, and REST API-based order placement with a robust C++ price-time priority matching engine.</p>
             <div class="tags"><span>C++</span><span>Node.js</span><span>Express.js</span><span>JavaScript</span><span>MongoDB</span><span>HTML</span><span>CSS</span></div>
             <div class="project-links">
               <button class="btn btn-small" onclick="openModal('modal-tradex')">View Case Study</button>
+              <a href="https://github.com/balu-0920/order-matching-engine" target="_blank" class="btn btn-icon" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              <a href="https://order-matching-engine-oqaa.onrender.com/" target="_blank" class="btn btn-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="./assets/weathernow.jpg" alt="WeatherNow Application" loading="lazy" onerror="this.src='./assets/placeholder.jpg'" class="project-img">
+          <div class="project-content">
+            <div class="project-header">
+              <h3>WeatherNow — Weather Application</h3>
+              <span class="status-badge completed">Completed</span>
+            </div>
+            <p>Developed a responsive weather application that retrieves real-time weather information for searched cities and the user's current location using the OpenWeather API and browser geolocation.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>OpenWeather API</span></div>
+            <div class="project-links">
+              <button class="btn btn-small" onclick="openModal('modal-weathernow')">View Case Study</button>
+              <a href="https://github.com/balu-0920/WeatherNow" target="_blank" class="btn btn-icon" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              <a href="https://weather-now-three-dusky.vercel.app/" target="_blank" class="btn btn-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
         </article>
@@ -194,10 +215,11 @@
               <h3>Smart Agriculture Decision Support</h3>
               <span class="status-badge completed">Completed</span>
             </div>
-            <p>Developed a location-aware crop recommendation system using Random Forest. Incorporated yield, profitability, and risk analysis with SHAP-based explainability. Extended with a RAG pipeline and a LangGraph-based agent coordinating agricultural knowledge retrieval.</p>
-            <div class="tags"><span>Python</span><span>Flask</span><span>Scikit-learn</span><span>SHAP</span><span>RAG</span><span>LangGraph</span><span>OpenWeather API</span></div>
+            <p>Developed a location-aware crop recommendation system using Random Forest. Incorporated yield, profitability, and risk analysis with SHAP-based explainability and a LangGraph-based agent.</p>
+            <div class="tags"><span>Python</span><span>Flask</span><span>Scikit-learn</span><span>SHAP</span><span>RAG</span><span>LangGraph</span></div>
             <div class="project-links">
               <button class="btn btn-small" onclick="openModal('modal-agri')">View Case Study</button>
+              <a href="https://github.com/balu-0920/Crop" target="_blank" class="btn btn-icon" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
             </div>
           </div>
         </article>
@@ -206,11 +228,16 @@
           <img src="./assets/attendance.jpg" alt="Attendance Tracker" loading="lazy" onerror="this.src='./assets/placeholder.jpg'" class="project-img">
           <div class="project-content">
             <div class="project-header">
-              <h3>Attendance Tracker</h3>
+              <h3>Attendance Tracking System</h3>
               <span class="status-badge completed">Completed</span>
             </div>
             <p>Automated attendance management system designed to streamline record-keeping, improve accuracy, and export data efficiently.</p>
             <div class="tags"><span>JavaScript</span><span>MongoDB</span><span>Node.js</span></div>
+            <div class="project-links">
+              <button class="btn btn-small" onclick="openModal('modal-attendance')">View Case Study</button>
+              <a href="https://github.com/balu-0920/Attendance-Tracking-System" target="_blank" class="btn btn-icon" aria-label="GitHub Repository"><i class="fab fa-github"></i></a>
+              <a href="https://attendance-tracking-system-4ppl.onrender.com/" target="_blank" class="btn btn-icon" aria-label="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
           </div>
         </article>
 
@@ -290,12 +317,37 @@
   <dialog id="modal-crowd" class="case-study-modal">
     <div class="modal-content">
       <button class="close-modal" onclick="closeModal('modal-crowd')">&times;</button>
-      <h2>Case Study: Crowd Management System</h2>
+      <h2>Real-Time Crowd Management System</h2>
+      <p class="modal-subtitle">Computer vision analytics for spatial density estimation and crowd tracking.</p>
+      
       <div class="modal-body">
-        <h3>Pipeline Architecture</h3>
-        <p><code>Camera/Input &rarr; YOLOv8 Detection &rarr; Centroid Tracking &rarr; Grid-Based Density Estimation</code></p>
-        <h3>Engineering Highlights</h3>
-        <p>Implemented frame skipping algorithms to reduce computational overhead without losing critical tracking fidelity. The backend securely transforms raw detections into hourly and daily rollups, while the Flask microservice runs the predictive ML pipeline.</p>
+        <h3>Problem Statement</h3>
+        <p>Manual crowd monitoring in public spaces is inefficient and inconsistent. Security operators struggle to continuously gauge crowd density across multiple feeds, making it difficult to preemptively identify overcrowded areas and respond effectively.</p>
+        
+        <h3>Key Features</h3>
+        <ul class="modal-list">
+          <li><strong>Person Detection & Tracking:</strong> Utilizes pretrained YOLOv8 for accurate human detection paired with centroid-based tracking to maintain approximate object identities across frames.</li>
+          <li><strong>Grid-Based Density Estimation:</strong> Divides monitored scenes into spatial grids to estimate regional concentration dynamically.</li>
+          <li><strong>Dashboard Analytics:</strong> Presents live visual analytics, historical trends, and density metrics.</li>
+        </ul>
+
+        <h3>Technical Architecture</h3>
+        <p>Incoming video frames and submitted field images are processed through OpenCV. A core engineering decision was to implement <em>frame skipping</em>, selectively bypassing frames to drastically reduce computational workload and improve processing throughput on constrained hardware without sacrificing critical tracking fidelity. Raw detections are subsequently aggregated by a Node.js/Express backend (backed by MongoDB) into hourly and daily rollups.</p>
+
+        <h3>Engineering Challenges</h3>
+        <ul class="modal-list">
+          <li>Balancing the computational cost of continuous object detection with the need for high temporal resolution using adaptive frame skipping.</li>
+          <li>Addressing occlusion, variable lighting, and tracking failures inherent to simple centroid-based association in extremely dense crowds.</li>
+        </ul>
+
+        <h3>Limitations & Future Improvements</h3>
+        <p>Currently, the centroid-based tracking mechanism may drop or swap identities when individuals overlap heavily or briefly exit the frame. Future iterations will focus on integrating more robust multi-object tracking (e.g., DeepSORT) to handle heavy occlusion, implementing localized density alerts, and testing performance under edge-device resolution constraints.</p>
+      </div>
+      
+      <div class="modal-footer">
+        <a href="https://github.com/balu-0920/real-time-crowd-analytics-system" target="_blank" class="btn btn-primary">View GitHub Repo</a>
+        <a href="https://crowd-dashboard.onrender.com/" target="_blank" class="btn btn-secondary">Open Live Demo</a>
+        <button class="btn btn-secondary" onclick="closeModal('modal-crowd')">Back to Projects</button>
       </div>
     </div>
   </dialog>
@@ -303,10 +355,76 @@
   <dialog id="modal-tradex" class="case-study-modal">
     <div class="modal-content">
       <button class="close-modal" onclick="closeModal('modal-tradex')">&times;</button>
-      <h2>Case Study: TradeX Engine</h2>
+      <h2>TradeX — Online Trading Exchange Simulator</h2>
+      <p class="modal-subtitle">A full-stack algorithmic simulation of an order-matching trading environment.</p>
+      
       <div class="modal-body">
-        <h3>Matching Engine Architecture</h3>
-        <p>Utilized a C++ price-time priority algorithm managing limit order books via efficient STL data structures. It supports partial order executions and weighted-average tracking, communicating securely with the Node.js/Express.js dashboard interface.</p>
+        <h3>Problem Statement</h3>
+        <p>Financial trading interfaces must reliably organize volatile buy and sell orders while strictly applying algorithmic rules for execution. This educational simulator explores the core concepts of exchange architecture by implementing a deterministic matching engine and reflecting order states in real-time.</p>
+        
+        <h3>Key Features</h3>
+        <ul class="modal-list">
+          <li><strong>Order Management:</strong> Users submit targeted buy/sell orders that traverse lifecycle states (pending, partially filled, filled).</li>
+          <li><strong>Matching Engine:</strong> Implements a strict price-time priority algorithm to pair buyers and sellers.</li>
+          <li><strong>Portfolio Accounting:</strong> Simulates holding balances and tracks executed transaction histories.</li>
+        </ul>
+
+        <h3>Technical Architecture</h3>
+        <p>The core of the system is a custom <strong>C++ matching engine</strong> built around Standard Template Library (STL) data structures for rapid order-book management. It executes partial and full fills based on price-time priority—better-priced orders execute first, and ties are broken by arrival time. The engine is cleanly decoupled from the frontend, communicating state changes to a Node.js/Express application which manages authentication, user portfolios, and the React dashboard visualization.</p>
+
+        <h3>Engineering Challenges</h3>
+        <ul class="modal-list">
+          <li>Maintaining exact order-matching sequences and state consistency during partial executions.</li>
+          <li>Separating the high-performance algorithmic execution logic from the user-facing dashboard components.</li>
+        </ul>
+
+        <h3>Limitations & Future Improvements</h3>
+        <p>TradeX is designed exclusively as an educational simulator and lacks production-grade financial security, concurrency guarantees, and persistent database clustering. Future improvements include expanding order types (e.g., market and stop-limit orders), automated edge-case benchmarking under high synthetic volume, and enhanced execution-history graphs.</p>
+      </div>
+
+      <div class="modal-footer">
+        <a href="https://github.com/balu-0920/order-matching-engine" target="_blank" class="btn btn-primary">View GitHub Repo</a>
+        <a href="https://order-matching-engine-oqaa.onrender.com/" target="_blank" class="btn btn-secondary">Open Live Demo</a>
+        <button class="btn btn-secondary" onclick="closeModal('modal-tradex')">Back to Projects</button>
+      </div>
+    </div>
+  </dialog>
+  
+  <dialog id="modal-weathernow" class="case-study-modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal-weathernow')">&times;</button>
+      <h2>WeatherNow — Weather Forecast Application</h2>
+      <p class="modal-subtitle">Responsive, lightweight weather dashboard integrating third-party APIs and browser geolocation.</p>
+      
+      <div class="modal-body">
+        <h3>Problem Statement</h3>
+        <p>Users often require instantaneous weather retrieval for their current location or a specific city without navigating dense, ad-heavy commercial weather platforms. WeatherNow aims to provide a frictionless, immediate weather search experience.</p>
+        
+        <h3>Key Features</h3>
+        <ul class="modal-list">
+          <li><strong>Geolocation & Search:</strong> Retrieves weather by manually searching a city name or utilizing browser GPS coordinates.</li>
+          <li><strong>Detailed Conditions:</strong> Displays temperature, feels-like metrics, humidity, wind speed, pressure, visibility, daily high/lows, and sunrise/sunset times.</li>
+          <li><strong>Caching & UX:</strong> Supports on-the-fly Celsius/Fahrenheit toggling and persists up to five recent city searches using <code>localStorage</code>.</li>
+        </ul>
+
+        <h3>Technical Architecture & Security</h3>
+        <p>WeatherNow is constructed purely with HTML, CSS, and Vanilla JavaScript. It interfaces asynchronously with the OpenWeather API via standard <code>fetch()</code> requests. The DOM is updated dynamically to reflect loading states, dynamic weather icons, and error handling for invalid queries.</p>
+        <p><strong>Security Note:</strong> Currently, the OpenWeather API key is utilized directly in frontend JavaScript. Because browser-delivered code inherently exposes such keys, it is strictly recommended to apply HTTP referer (domain) restrictions in the API provider dashboard to prevent unauthorized quota consumption.</p>
+
+        <h3>Engineering Challenges</h3>
+        <ul class="modal-list">
+          <li>Managing asynchronous network responses gracefully, providing accurate user feedback during latency or 404 Not Found (invalid city) errors.</li>
+          <li>Handling edge cases where users deny browser Geolocation permissions.</li>
+        </ul>
+
+        <h3>Limitations & Future Improvements</h3>
+        <p>The application only surfaces current weather parameters provided by the API; it does not predict future severe weather events. Future iterations should proxy API requests through a backend serverless function to completely hide the API key, add hourly forecasting modules, and include request cancellation for rapidly overlapping searches.</p>
+      </div>
+
+      <div class="modal-footer">
+        <a href="https://github.com/balu-0920/WeatherNow" target="_blank" class="btn btn-primary">View GitHub Repo</a>
+        <a href="https://weather-now-three-dusky.vercel.app/" target="_blank" class="btn btn-secondary">Open Live Demo</a>
+        <button class="btn btn-secondary" onclick="closeModal('modal-weathernow')">Back to Projects</button>
       </div>
     </div>
   </dialog>
@@ -314,10 +432,74 @@
   <dialog id="modal-agri" class="case-study-modal">
     <div class="modal-content">
       <button class="close-modal" onclick="closeModal('modal-agri')">&times;</button>
-      <h2>Case Study: Smart Agriculture</h2>
+      <h2>Smart Agriculture Decision Support System</h2>
+      <p class="modal-subtitle">Machine learning prediction pipeline evaluating soil and weather for crop viability.</p>
+      
       <div class="modal-body">
-        <h3>Technical Implementation</h3>
-        <p>Engineered a robust Random Forest classifier for crop recommendation, enhanced by SHAP for output explainability. Differentiated from standard ML models by integrating a LangGraph agent that dynamically coordinates an agricultural knowledge RAG pipeline alongside live OpenWeather API data.</p>
+        <h3>Problem Statement</h3>
+        <p>Crop selection heavily depends on granular environmental data, including soil nutrients (N, P, K), pH, humidity, and rainfall. Making agricultural decisions without evaluating these factors limits yield potential. This project provides an interface that applies machine learning to current metrics to recommend optimal crops.</p>
+        
+        <h3>Key Features</h3>
+        <ul class="modal-list">
+          <li><strong>Crop Recommendation:</strong> Leverages a trained classifier over 22 distinct crop categories.</li>
+          <li><strong>Weather Integration:</strong> Automatically retrieves live environmental context (temperature, humidity) via the OpenWeather API based on user location inputs.</li>
+          <li><strong>Explainability & Context:</strong> Utilizes SHAP to interpret model decisions alongside a LangGraph/RAG pipeline for domain-specific knowledge retrieval.</li>
+        </ul>
+
+        <h3>Technical Implementation & Evaluation</h3>
+        <p>The core pipeline cleans agricultural datasets and trains a classification model using Scikit-learn. The model achieved a reported <strong>99.55% test accuracy</strong> (438/440 correct predictions) and a 99.38% cross-validation accuracy on the training dataset. The saved model is served via a Flask backend that seamlessly integrates OpenWeather API payloads to fulfill prediction prerequisites dynamically.</p>
+
+        <h3>Engineering Challenges</h3>
+        <ul class="modal-list">
+          <li>Ensuring strict parity between training-stage data preprocessing and real-time inference inputs.</li>
+          <li>Handling external API failures gracefully to avoid breaking the inference pipeline.</li>
+        </ul>
+
+        <h3>Limitations & Future Improvements</h3>
+        <p>Dataset performance does not guarantee success across unrepresented geographic regions or anomalous growing seasons. The system should not replace local agronomist expertise. Future improvements will focus on validating the model on independent, region-specific datasets, providing predictive uncertainty scores, and expanding fallback handling for API timeouts.</p>
+      </div>
+
+      <div class="modal-footer">
+        <a href="https://github.com/balu-0920/Crop" target="_blank" class="btn btn-primary">View GitHub Repo</a>
+        <button class="btn btn-secondary" onclick="closeModal('modal-agri')">Back to Projects</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="modal-attendance" class="case-study-modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal('modal-attendance')">&times;</button>
+      <h2>Attendance Tracking System</h2>
+      <p class="modal-subtitle">Client-side application for maintaining records and threshold monitoring.</p>
+      
+      <div class="modal-body">
+        <h3>Problem Statement</h3>
+        <p>Manually maintaining academic attendance complicates the ongoing calculation of subject-wise percentages, making it difficult for students to monitor if they are meeting strict 75% institutional attendance requirements.</p>
+        
+        <h3>Key Features</h3>
+        <ul class="modal-list">
+          <li><strong>Subject & Threshold Monitoring:</strong> Dynamically calculates attended vs. total classes to immediately flag subjects falling below a 75% threshold.</li>
+          <li><strong>Record Management:</strong> Features calendar-based history viewing, data import/export capabilities, and an undo function for recent actions.</li>
+          <li><strong>Browser Storage:</strong> Utilizes <code>localStorage</code> for lightweight, immediate persistence without requiring account creation.</li>
+        </ul>
+
+        <h3>Technical Architecture</h3>
+        <p>The application relies heavily on DOM manipulation and JavaScript-based state management. When an attendance event is marked, the core logic recalculates the fractional percentage and selectively updates the UI dashboard. Data is serialized into JSON and stored persistently via the browser's native <code>localStorage</code> API, enabling rapid session recovery.</p>
+
+        <h3>Engineering Challenges</h3>
+        <ul class="modal-list">
+          <li>Implementing a reliable undo stack without corrupting the overall attendance state.</li>
+          <li>Structuring the import/export JSON schema to ensure data integrity during backups and restorations.</li>
+        </ul>
+
+        <h3>Limitations & Future Improvements</h3>
+        <p>Because the app relies on <code>localStorage</code>, data is inextricably tied to the specific browser and device, risking permanent loss if browser cache is cleared. It is currently a single-user local tool. Future improvements include implementing an optional backend (Node.js/MongoDB) for cloud synchronization, user authentication, and generating exportable PDF attendance reports.</p>
+      </div>
+
+      <div class="modal-footer">
+        <a href="https://github.com/balu-0920/Attendance-Tracking-System" target="_blank" class="btn btn-primary">View GitHub Repo</a>
+        <a href="https://attendance-tracking-system-4ppl.onrender.com/" target="_blank" class="btn btn-secondary">Open Live Demo</a>
+        <button class="btn btn-secondary" onclick="closeModal('modal-attendance')">Back to Projects</button>
       </div>
     </div>
   </dialog>

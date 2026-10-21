@@ -47,14 +47,15 @@ body {
 
 /* Buttons & Badges */
 .btn {
-  display: inline-block; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; cursor: pointer; border: none; transition: transform 0.2s, background 0.2s;
+  display: inline-block; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 600; cursor: pointer; border: none; transition: transform 0.2s, background 0.2s; text-align: center;
 }
 .btn-primary { background: var(--primary-color); color: #fff; }
 .btn-primary:hover { filter: brightness(1.1); transform: translateY(-2px); }
 .btn-primary:focus { outline: none; box-shadow: var(--focus-ring); }
 .btn-secondary { background: var(--secondary-color); color: var(--text-color); }
 .btn-small { padding: 0.4rem 0.8rem; font-size: 0.9rem; }
-.btn-icon { background: none; color: var(--text-color); font-size: 1.5rem; padding: 0.4rem; }
+.btn-icon { background: none; color: var(--text-color); font-size: 1.5rem; padding: 0.4rem; display: inline-flex; align-items: center; justify-content: center;}
+.btn-icon:hover { color: var(--primary-color); }
 
 .status-badge { font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 12px; font-weight: bold; color: #fff; }
 .status-badge.completed { background-color: var(--status-complete); }
@@ -76,7 +77,14 @@ body {
 .hero p { max-width: 650px; font-size: 1.1rem; margin-bottom: 2rem; }
 .hero-actions { display: flex; gap: 1rem; align-items: center; }
 .hero-image { flex: 1; display: flex; justify-content: center; }
-.profile-img { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 4px solid var(--primary-color); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+.profile-img { 
+  width: 350px; 
+  height: 350px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 4px solid var(--primary-color); 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
 
 /* Grid Layouts - Mobile First */
 .education-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
@@ -158,42 +166,40 @@ body {
 .project-content p { margin-bottom: 1rem; }
 .project-links { margin-top: auto; padding-top: 1.5rem; display: flex; gap: 1rem; align-items: center; }
 
-/* =========================================
-   Unified Hover Effects (Skills, Projects, Profiles) 
-   ========================================= */
+/* Unified Hover Effects */
 .skill-category, .project-card, .achievement-card {
   transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease, background-color 250ms ease;
 }
-
 .skill-category:hover, .project-card:hover, .achievement-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary-color);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
-
 [data-theme="dark"] .skill-category:hover, 
 [data-theme="dark"] .project-card:hover, 
 [data-theme="dark"] .achievement-card:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  background-color: rgba(61, 139, 253, 0.03); /* Extremely subtle accent tint in dark mode */
+  background-color: rgba(61, 139, 253, 0.03); 
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .skill-category, .project-card, .achievement-card {
-    transition: none;
-  }
-  .skill-category:hover, .project-card:hover, .achievement-card:hover {
-    transform: none;
-  }
+  .skill-category, .project-card, .achievement-card { transition: none; }
+  .skill-category:hover, .project-card:hover, .achievement-card:hover { transform: none; }
 }
 
-/* Modals */
-.case-study-modal { margin: auto; padding: 0; border: 1px solid var(--border-color); border-radius: 8px; max-width: 800px; width: 90%; background: var(--bg-color); color: var(--text-color); }
+/* Modals / Case Studies */
+.case-study-modal { margin: auto; padding: 0; border: 1px solid var(--border-color); border-radius: 8px; max-width: 850px; width: 92%; background: var(--bg-color); color: var(--text-color); max-height: 90vh; overflow-y: auto;}
 .case-study-modal::backdrop { background: rgba(0, 0, 0, 0.7); }
-.modal-content { padding: 2rem; position: relative; }
-.close-modal { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; color: var(--text-color); cursor: pointer; }
-.modal-body h3 { margin: 1.5rem 0 0.5rem; color: var(--primary-color); }
+.modal-content { padding: 2.5rem; position: relative; }
+.close-modal { position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none; font-size: 1.5rem; color: var(--text-color); cursor: pointer; transition: color 0.2s;}
+.close-modal:hover { color: var(--primary-color); }
+.modal-subtitle { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border-color);}
+.modal-body h3 { margin: 1.5rem 0 0.75rem; color: var(--primary-color); }
+.modal-body p { margin-bottom: 1rem; }
 .modal-body code { background: var(--secondary-color); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.9rem; }
+.modal-list { margin-left: 1.5rem; margin-bottom: 1.5rem; }
+.modal-list li { margin-bottom: 0.5rem; }
+.modal-footer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color); display: flex; gap: 1rem; flex-wrap: wrap; }
 
 /* Contact Form Improvements */
 .contact-form { max-width: 600px; margin: 0 auto; }
@@ -224,6 +230,7 @@ body {
 @media (max-width: 900px) {
   .hero { flex-direction: column-reverse; text-align: center; gap: 2rem; }
   .hero-actions { justify-content: center; }
-  .profile-img { width: 220px; height: 220px; }
+  .profile-img { width: 260px; height: 260px; }
   .nav-links { display: none; }
+  .modal-content { padding: 1.5rem; }
 }

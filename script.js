@@ -60,7 +60,7 @@ const contactForm = document.getElementById('contact-form');
 const submitBtn = document.getElementById('submit-btn');
 const formStatus = document.getElementById('form-status');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', function(e) {
   e.preventDefault();
   
   if (!contactForm.checkValidity()) {
@@ -72,16 +72,16 @@ contactForm.addEventListener('submit', (e) => {
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending...';
 
-  // Ensure EmailJS is properly configured with your keys
-  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', contactForm)
+  // Using your specific Service ID and Template ID
+  emailjs.sendForm('service_61v557n', 'template_lt53pv8', this)
     .then(() => {
-      formStatus.textContent = 'Message sent successfully!';
+      formStatus.textContent = 'Message Sent Successfully!';
       formStatus.style.color = '#198754';
       contactForm.reset();
     })
     .catch((error) => {
-      console.error('EmailJS Error:', error);
-      formStatus.textContent = 'Failed to send message. Please ensure your EmailJS credentials are correct.';
+      console.log(error);
+      formStatus.textContent = error.text || 'Failed to send message. Please try again.';
       formStatus.style.color = '#dc3545';
     })
     .finally(() => {
